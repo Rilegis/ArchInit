@@ -1,0 +1,46 @@
+# Keyboard layout settings
+    ls /usr/share/kbd/keymaps/**/*.map.gz
+    loadkeys <keymap>
+
+# NTP settings
+    timedatectl set-ntp true
+    timedatectl status
+
+# System disk partitioning
+    fdisk /dev/<system_disk>
+        g (create a new GPT partition table)
+        n 512M (EFI partition)
+        n 4G (SWAP partition)
+        n [remaining space] (root partition)
+        t uefi 1 (set partition 1 type to 'EFI System')
+        t swap 2 (set partition 2 type to 'SWAP')
+        w (write changes to partition table)
+
+# Home disk partitioning
+    fdisk /dev/<home_disk>
+        g (create a new GPT partition table)
+        n [remaining space] (home partition)
+        w (write changes to partition table)
+
+# System disk formatting
+    mkfs.fat -F 32 /dev/<efi_partition> (format UEFI partition to FAT32)
+    mkswap /dev/<swap_partition> (format SWAP partition to SWAP)
+    mkfs.ext4 /dev/<root_partition> (format root partition to EXT4)
+
+# Home disk formatting
+    mkfs.ext4 /dev/<home_partition> (format home partition)
+
+# Mount partitions to new system
+    mount /dev/<root_partition> /mnt (mount root partition)
+    #mount --mkdir /dev/<efi_partition> /mnt/boot/EFI (mount UEFI partition)
+    mount --mkdir /dev/<home_partition> /mnt/home (mount home partition)
+    swapon /dev/<swap_partition> (enable swap)
+
+# Essential packages installation via 'pacstrap'
+    pacstrap /mnt base linux linux-firmware intel-ucode nano sudo git (use 'amd-ucode' for AMD processors)
+
+# fstab generation with UUID definitions
+    genfstab -U /mnt >> /mnt/etc/fstab
+
+# chroot into new system
+    arch-chroot /mnt
