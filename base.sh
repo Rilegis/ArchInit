@@ -76,17 +76,19 @@ echo "[ARCHINIT] Installing utilities packages..."
 pacman -S htop
 # Drivers
 echo "[ARCHINIT] Installing $D_DRIVERS drivers..."
-if [ $D_DRIVERS = "INTEL" ] # INTEL drivers
+if [ $D_DRIVERS = "INTEL" ]; then # INTEL drivers
     pacman -S mesa vulkan-intel
-elif [ $D_DRIVERS = "NVIDIA" ] # NVIDIA drivers and utilities
+elif [ $D_DRIVERS = "NVIDIA" ]; then # NVIDIA drivers and utilities
     pacman -S nvidia nvidia-utils nvidia-settings
-elif [ $D_DRIVERS = "AMD" ] # AMD GPU drivers and utilities
+elif [ $D_DRIVERS = "AMD" ]; then # AMD GPU drivers and utilities
     pacman -S xf86-video-amdgpu
-elif [ $D_DRIVERS = "VMWARE" ] # VMWARE drivers
+elif [ $D_DRIVERS = "VMWARE" ]; then # VMWARE drivers
     pacman -S open-vm-tools xf86-input-vmmouse xf86-video-vmware mesa gtk2 gtkmm
     rm /etc/X11/Xwrapper.config # Prevents duplicate entries in case of multiple execution of the script
     echo "needs_root_rights=yes" >> /etc/X11/Xwrapper.config
     systemctl enable --now vmtoolsd
+else
+    echo "[ARCHINIT] No video driver selected..."
 fi
 
 # Check NTP sync
