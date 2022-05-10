@@ -21,13 +21,18 @@ ln -sf /usr/share/zoneinfo/$TZ_ZONE/$TZ_CITY /etc/localtime
 hwclock --systohc # Generates '/etc/adjtime'
 
 # Locales generation
+rm /etc/locale.gen # Prevents duplicate entries in case of multiple execution of the script
 echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen
 locale-gen
+rm /etc/locale.conf # Prevents duplicate entries in case of multiple execution of the script
 echo "LANG=en_US.UTF-8" >> /etc/locale.conf
+rm /etc/vconsole.conf # Prevents duplicate entries in case of multiple execution of the script
 echo "KEYMAP=$KEYMAP" >> /etc/vconsole.conf
 
 # Set hostnames
+rm /etc/hostname # Prevents duplicate entries in case of multiple execution of the script
 echo $H_HOST >> /etc/hostname
+rm /etc/hosts # Prevents duplicate entries in case of multiple execution of the script
 echo "127.0.0.1 localhost" >> /etc/hosts
 echo "::1       localhost" >> /etc/hosts
 echo "127.0.1.1 $H_HOST.localdomain $H_HOST" >> /etc/hosts
@@ -71,14 +76,15 @@ echo "[ARCHINIT] Installing utilities packages..."
 pacman -S htop
 # Drivers
 echo "[ARCHINIT] Installing $D_DRIVERS drivers..."
-if [ "$D_DRIVERS" = "INTEL" ] # INTEL drivers
+if [ $D_DRIVERS = "INTEL" ] # INTEL drivers
     pacman -S mesa vulkan-intel
-elif [ "$D_DRIVERS" = "NVIDIA" ] # NVIDIA drivers and utilities
+elif [ $D_DRIVERS = "NVIDIA" ] # NVIDIA drivers and utilities
     pacman -S nvidia nvidia-utils nvidia-settings
-elif [ "$D_DRIVERS" = "AMD" ] # AMD GPU drivers and utilities
+elif [ $D_DRIVERS = "AMD" ] # AMD GPU drivers and utilities
     pacman -S xf86-video-amdgpu
-elif [ "$D_DRIVERS" = "VMWARE" ] # VMWARE drivers
+elif [ $D_DRIVERS = "VMWARE" ] # VMWARE drivers
     pacman -S open-vm-tools xf86-input-vmmouse xf86-video-vmware mesa gtk2 gtkmm
+    rm /etc/X11/Xwrapper.config # Prevents duplicate entries in case of multiple execution of the script
     echo "needs_root_rights=yes" >> /etc/X11/Xwrapper.config
     systemctl enable --now vmtoolsd
 fi
