@@ -58,7 +58,7 @@ grub-mkconfig -o /boot/grub/grub.cfg
 
 # Base packages installation
 echo "[ARCHINIT] Installing base packages..."
-pacman -S ntp acpid acpi acpi_calls dbus cups ntfs-3g networkmanager base-devel nfs-utils archlinux-keyring
+pacman -S ntp acpid acpi acpi_call dbus cups ntfs-3g networkmanager base-devel nfs-utils archlinux-keyring
 systemctl enable NetworkManager
 systemctl enable ntpd
 systemctl enable acpid
