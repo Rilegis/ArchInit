@@ -27,7 +27,7 @@ locale-gen
 rm /etc/locale.conf # Prevents duplicate entries in case of multiple execution of the script
 echo "LANG=en_US.UTF-8" >> /etc/locale.conf
 rm /etc/vconsole.conf # Prevents duplicate entries in case of multiple execution of the script
-echo "KEYMAP=$KEYMAP" >> /etc/vconsole.conf
+echo "KEYMAP=$K_KEYMAP" >> /etc/vconsole.conf
 
 # Set hostnames
 rm /etc/hostname # Prevents duplicate entries in case of multiple execution of the script
