@@ -71,6 +71,10 @@ systemctl enable cups
 # Pipewire
 echo "[ARCHINIT] Installing pipewire..."
 pacman -S pipewire pipewire-pulse pipewire-alsa pipewire-jack wireplumber
+
+# W.I.P - Audio and video codecs
+#pacman -S vlc alsa-utils pavucontrol
+
 # Utilities
 echo "[ARCHINIT] Installing utilities packages..."
 pacman -S htop
