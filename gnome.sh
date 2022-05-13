@@ -10,7 +10,7 @@ pacman -S gnome-shell nautilus gnome-terminal gnome-software gnome-control-cente
 
 # GNOME utilities installation
 echo "[ARCHINIT] Installing gnome utilities..."
-pacman -S gnome-tweak-tool gnome-backgrounds gnome-themes-extra gnome-shell-extensions gnome-remote-desktop gnome-connections network-manager-applet
+pacman -S gnome-tweak-tool gnome-backgrounds gnome-themes-extra gnome-shell-extensions gnome-remote-desktop gnome-connections network-manager-applet gnome-characters
 
 # Enable GDM service
 echo "[ARCHINIT] Enabling GDM service..."
