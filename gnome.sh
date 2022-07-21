@@ -6,7 +6,7 @@ pacman -Syu
 
 # GNOME base installation (Includes Wayland compositor)
 echo "[ARCHINIT] Installing minimal GNOME setup..."
-pacman -S gnome-shell nautilus gnome-terminal gnome-software gnome-software-packagekit-plugin gnome-control-center gnome-disk-utility gnome-menus gnome-calculator gnome-screenshot gnome-user-share xdg-user-dirs-gtk gnome-keyring gdm
+pacman -S gnome-shell gnome-files gnome-terminal gnome-software gnome-software-packagekit-plugin gnome-control-center gnome-disk-utility gnome-menus gnome-calculator gnome-screenshot gnome-user-share xdg-user-dirs-gtk gnome-keyring gdm
 
 # GNOME utilities installation
 echo "[ARCHINIT] Installing gnome utilities..."
