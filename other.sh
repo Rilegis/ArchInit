@@ -4,6 +4,10 @@
 echo "[ARCHINIT] Installing useful packages..."
 pacman -S flatpak noto-fonts-emoji rsync grub-customizer
 
+# Install AUR helper (yay)
+git clone https://aur.archlinux.org/yay.git
+cd yay && makepkg -si && cd ..
+
 # Flatpak utilities
 echo "[ARCHINIT] Installing useful flatpak packages..."
 flatpak install flathub org.gustavoperedo.FontDownloader # Font Downloader (Download and install fonts)
