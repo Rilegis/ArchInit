@@ -23,6 +23,7 @@ flatpak install flathub --user com.usebottles.bottles # Bottles (Run Windows sof
 #flatpak install flathub --user com.obsproject.Studio # OBS Studio (Not sure if i'll ever need it...but whatever)
 #flatpak install --from https://flathub.org/repo/appstream/org.kicad.KiCad.flatpakref --user # KiCad (FOSS PCB design software)
 flatpak install --from https://flathub.org/repo/appstream/org.libreoffice.LibreOffice.flatpakref --user # Office suite
+flatpak install flathub --user org.gnome.World.PikaBackup # Backup solution (home partition only)
 
 # Other utilities
 # piper (pacman) for gaming mouse configuration
