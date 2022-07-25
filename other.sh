@@ -2,7 +2,7 @@
 
 # Useful packages
 echo "[ARCHINIT] Installing useful packages..."
-pacman -S flatpak noto-fonts-emoji rsync
+pacman -S flatpak noto-fonts-emoji rsync grub-customizer
 
 # Flatpak utilities
 echo "[ARCHINIT] Installing useful flatpak packages..."
