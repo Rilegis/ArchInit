@@ -25,9 +25,14 @@ flatpak install flathub --user com.usebottles.bottles # Bottles (Run Windows sof
 flatpak install --from https://flathub.org/repo/appstream/org.libreoffice.LibreOffice.flatpakref --user # Office suite
 flatpak install flathub --user org.gnome.World.PikaBackup # Backup solution (home partition only)
 
-# Other utilities
+# OPENRGB (AppImage)
+# Requires (INTEL): 
+# sudo su root && nano /etc/modules-load.d/i2c-dev.conf && echo i2c-dev > /etc/modules-load.d/i2c-dev.conf
+# sudo su root && nano /etc/modules-load.d/i2c-i801.conf && echo i2c-i801 > /etc/modules-load.d/i2c-i801.conf
+# Requires (AMD):
+# sudo su root && nano /etc/modules-load.d/i2c-piix4.conf && echo i2c-piix4 > /etc/modules-load.d/i2c-piix4.conf
+
 # piper (pacman) for gaming mouse configuration
-# openrgb (appimage) for rgb control
 # waydroid (aur) to run android apps on linux
 
 # Virtualization
