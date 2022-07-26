@@ -32,8 +32,10 @@ flatpak install flathub --user org.gnome.World.PikaBackup # Backup solution (hom
 # Requires (AMD):
 # sudo su root && nano /etc/modules-load.d/i2c-piix4.conf && echo i2c-piix4 > /etc/modules-load.d/i2c-piix4.conf
 
+# WAYDROID (AUR)
+# Notes: https://wiki.archlinux.org/title/Waydroid
+
 # piper (pacman) for gaming mouse configuration
-# waydroid (aur) to run android apps on linux
 
 # Virtualization
 #echo "[ARCHINIT] Installing virtualization packages..."
