@@ -1,3 +1,8 @@
+# Usage:
+# cp openrgb.service /home/USERNAME/.config/systemd/USERNAME
+# systemctl --user daemon-reload
+# systemctl --user enable openrgb.service
+
 [Unit]
 Description=OpenRGB Profile Loader
 
