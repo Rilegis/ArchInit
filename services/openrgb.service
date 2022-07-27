@@ -1,0 +1,9 @@
+[Unit]
+Description=OpenRGB Profile Loader
+
+[Service]
+Type=oneshot
+ExecStart=/path/to/OpenRGB.AppImage -p PROFILE_NAME.orp
+
+[Install]
+WantedBy=default.target
