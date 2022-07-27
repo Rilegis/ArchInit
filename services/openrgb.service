@@ -1,5 +1,5 @@
 # Usage:
-# cp openrgb.service /home/USERNAME/.config/systemd/USERNAME
+# cp openrgb.service /home/USERNAME/.config/systemd/USERNAME/openrgb.service
 # systemctl --user daemon-reload
 # systemctl --user enable openrgb.service
 
