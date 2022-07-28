@@ -16,6 +16,7 @@ yay -S vscodium-git
 # Flatpak utilities
 echo "[ARCHINIT] Installing useful flatpak packages..."
 flatpak remote-add --user --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+flatpak install flathub --user com.github.tchx84.Flatseal # Manage Flatpak apps permissions
 flatpak install flathub --user org.gustavoperedo.FontDownloader # Font Downloader (Download and install fonts)
 flatpak install flathub --user fr.romainvigier.MetadataCleaner # Metadata Cleaner (Deletes metadata from files)
 flatpak install flathub --user org.polymc.PolyMC # PolyMC (FOSS fork of MultiMC, has better utilities and QOL improvements)
