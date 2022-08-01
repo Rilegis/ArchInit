@@ -41,3 +41,6 @@ flatpak install flathub --user org.gnome.World.PikaBackup # Backup solution (hom
 # Virtualization
 #echo "[ARCHINIT] Installing virtualization packages..."
 #pacman -S libvirtd virt-manager qemu qemu-arch-extra
+
+# GENERAL STUFF
+#pacman -S hplip # HO Printiung utility (Only if HP printers are present in the network)
