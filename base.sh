@@ -68,6 +68,8 @@ systemctl enable NetworkManager
 systemctl enable ntpd
 systemctl enable acpid
 systemctl enable cups
+usermod -aG lp $U_USERNAME # Add user to 'lp' group, needed for managing CUPS printers
+
 # Pipewire
 echo "[ARCHINIT] Installing pipewire..."
 pacman -S pipewire pipewire-pulse pipewire-alsa pipewire-jack wireplumber
