@@ -44,4 +44,4 @@ flatpak install flathub --user org.gnome.World.PikaBackup # Backup solution (hom
 
 # GENERAL STUFF
 # For CUPS printing drivers see: https://wiki.archlinux.org/title/CUPS/Printer-specific_problems
-#pacman -S hplip # HO Printiung utility (Only if HP printers are present in the network)
+#pacman -S hplip # HP Printiung utility (Only if HP printers are present in the network)
