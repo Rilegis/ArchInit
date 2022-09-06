@@ -2,7 +2,7 @@
 
 # Useful packages
 echo "[ARCHINIT] Installing useful packages..."
-pacman -S flatpak noto-fonts-emoji grub-customizer discord
+pacman -S flatpak noto-fonts-emoji grub-customizer discord pacman-contrib thunderbird libnotify i2c-tools
 
 # Install YAY AUR helper (Run as non-root user)
 git clone https://aur.archlinux.org/yay.git
@@ -12,10 +12,19 @@ cd yay && makepkg -si && cd ..
 yay -S appimagelauncher
 yay -S vscodium-bin
 
+# BLuetooth module
+pacman -S gnome-bluetooth-3.0
+modprobe btusb
+echo btusb > /etc/modules-load.d/btusb.conf
+systemctl enable bluetooth.service
+
 # OpenRGB & related kernel modules (Requires full PC reboot)
 yay -S openrgb
+modprobe i2c-dev
+modprobe i2c-i801
 echo i2c-dev > /etc/modules-load.d/i2c-dev.conf # (Necessary for INTEL only)
 echo i2c-i801 > /etc/modules-load.d/i2c-i801.conf # (Necessary for INTEL only)
+# modprobe i2c-piix4 # (Necessary for AMD only)
 # echo i2c-piix4 > /etc/modules-load.d/i2c-piix4.conf # (Necessary for AMD only)
 # Add profile from OpenRGB & edit openrgb.service
 # nano /usr/lib/systemd/system/openrgb.service
