@@ -4,7 +4,7 @@
 echo "[ARCHINIT] Installing useful packages..."
 pacman -S flatpak noto-fonts-emoji grub-customizer discord
 
-# Install AUR helper (yay)
+# Install YAY AUR helper (Run as non-root user)
 git clone https://aur.archlinux.org/yay.git
 cd yay && makepkg -si && cd ..
 
