@@ -23,6 +23,8 @@ hwclock --systohc # Generates '/etc/adjtime'
 # Locales generation
 rm /etc/locale.gen # Prevents duplicate entries in case of multiple execution of the script
 echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen
+echo "en_GB.UTF-8 UTF-8" >> /etc/locale.gen
+echo "it_IT.UTF-8 UTF-8" >> /etc/locale.gen
 locale-gen
 rm /etc/locale.conf # Prevents duplicate entries in case of multiple execution of the script
 echo "LANG=en_US.UTF-8" >> /etc/locale.conf
