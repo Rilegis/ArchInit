@@ -46,6 +46,10 @@ flatpak install flathub --user com.usebottles.bottles # Bottles (Run Windows sof
 flatpak install --from https://flathub.org/repo/appstream/org.libreoffice.LibreOffice.flatpakref --user # Office suite
 flatpak install flathub --user org.gnome.World.PikaBackup # Backup solution (home partition only)
 
+# Set default file manager for apps (check /home/USER/.config/mimeapps.list)
+xdg-mime default org.gnome.Nautilus.desktop inode/directory # (GNOME only)
+# xdg-mime default Dolphin.desktop inode/directory # (KDE only)
+
 # WAYDROID (AUR)
 # Notes: https://wiki.archlinux.org/title/Waydroid
 
