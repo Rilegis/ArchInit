@@ -2,7 +2,7 @@
 
 # Useful packages
 echo "[ARCHINIT] Installing useful packages..."
-pacman -S flatpak noto-fonts-emoji grub-customizer discord pacman-contrib thunderbird libnotify i2c-tools
+pacman -S flatpak noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra grub-customizer discord pacman-contrib thunderbird libnotify i2c-tools
 
 # Install YAY AUR helper (Run as non-root user)
 git clone https://aur.archlinux.org/yay.git
