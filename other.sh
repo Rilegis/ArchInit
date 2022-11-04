@@ -2,7 +2,16 @@
 
 # Useful packages
 echo "[ARCHINIT] Installing useful packages..."
-pacman -S noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra grub-customizer discord pacman-contrib thunderbird libnotify i2c-tools
+pacman -S noto-fonts \
+    noto-fonts-cjk \
+    noto-fonts-emoji \
+    noto-fonts-extra \
+    grub-customizer \
+    discord \
+    pacman-contrib \
+    thunderbird \
+    libnotify \
+    i2c-tools
 
 # Kernel modules for OpenRGB (see run-non-root.sh); Requires full PC reboot.
 modprobe i2c-dev
