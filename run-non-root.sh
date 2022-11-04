@@ -7,16 +7,16 @@ git clone https://aur.archlinux.org/yay.git
 cd yay && makepkg -si && cd ..
 
 # Install AUR packages (Run as non-root user)
-yay -S appimagelauncher
-yay -S vscodium-bin
-yay -S openrgb
+yay -S appimagelauncher \
+    vscodium-bin \
+    openrgb
 # Add profile from OpenRGB & edit openrgb.service
 # nano /usr/lib/systemd/system/openrgb.service
 # set: ExecStart=/usr/bin/openrgb -p /home/USER/.config/OpenRGB/PROFILE.orp
 systemctl enable openrgb.service
 
 # Install flatpak package from regular repo (Run as non-root user)
-yay -s flatpak
+yay -S flatpak
 
 # Flatpak utilities (Run as non-root user)
 echo "[ARCHINIT] Installing useful flatpak packages..."
