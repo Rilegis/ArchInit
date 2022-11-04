@@ -33,7 +33,6 @@ flatpak remote-add --user --if-not-exists flathub https://flathub.org/repo/flath
 flatpak install flathub --user com.github.tchx84.Flatseal # Manage Flatpak apps permissions
 flatpak install flathub --user org.gustavoperedo.FontDownloader # Font Downloader (Download and install fonts)
 flatpak install flathub --user fr.romainvigier.MetadataCleaner # Metadata Cleaner (Deletes metadata from files)
-flatpak install flathub --user org.polymc.PolyMC # PolyMC (FOSS fork of MultiMC, has better utilities and QOL improvements)
 flatpak install flathub --user com.usebottles.bottles # Bottles (Run Windows software using wine)
 #flatpak install flathub --user com.obsproject.Studio # OBS Studio (Not sure if i'll ever need it...but whatever)
 #flatpak install --from https://flathub.org/repo/appstream/org.kicad.KiCad.flatpakref --user # KiCad (FOSS PCB design software)
