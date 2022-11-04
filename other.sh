@@ -11,7 +11,8 @@ pacman -S noto-fonts \
     pacman-contrib \
     thunderbird \
     libnotify \
-    i2c-tools
+    i2c-tools \
+    htop
 
 # Kernel modules for OpenRGB (see run-non-root.sh); Requires full PC reboot.
 modprobe i2c-dev

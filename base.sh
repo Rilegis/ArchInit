@@ -85,9 +85,6 @@ systemctl enable bluetooth.service
 # W.I.P - Audio and video codecs
 #pacman -S vlc alsa-utils pavucontrol
 
-# Utilities
-echo "[ARCHINIT] Installing utilities packages..."
-pacman -S htop
 # Drivers
 echo "[ARCHINIT] Installing $D_DRIVERS drivers..."
 if [ $D_DRIVERS = "INTEL" ]; then # INTEL drivers
