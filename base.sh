@@ -92,7 +92,7 @@ if [ $D_DRIVERS = "INTEL" ]; then # INTEL drivers
 elif [ $D_DRIVERS = "NVIDIA" ]; then # NVIDIA drivers and utilities
     pacman -S nvidia nvidia-utils nvidia-settings
 elif [ $D_DRIVERS = "AMD" ]; then # AMD GPU drivers and utilities
-    pacman -S xf86-video-amdgpu
+    pacman -S xf86-video-amdgpu vulkan-radeon
 elif [ $D_DRIVERS = "VMWARE" ]; then # VMWARE drivers
     pacman -S open-vm-tools xf86-input-vmmouse xf86-video-vmware mesa gtk2 gtkmm
     rm /etc/X11/Xwrapper.config # Prevents duplicate entries in case of multiple execution of the script
