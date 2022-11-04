@@ -12,12 +12,6 @@ cd yay && makepkg -si && cd ..
 yay -S appimagelauncher
 yay -S vscodium-bin
 
-# BLuetooth module
-pacman -S bluez bluez-utils
-modprobe btusb
-echo btusb > /etc/modules-load.d/btusb.conf
-systemctl enable bluetooth.service
-
 # OpenRGB & related kernel modules (Requires full PC reboot)
 yay -S openrgb
 modprobe i2c-dev

@@ -76,6 +76,12 @@ usermod -aG lp $U_USERNAME # Add user to 'lp' group, needed for managing CUPS pr
 echo "[ARCHINIT] Installing pipewire..."
 pacman -S pipewire pipewire-pulse pipewire-alsa pipewire-jack wireplumber
 
+# Bluetooth module
+pacman -S bluez bluez-utils
+modprobe btusb
+echo btusb > /etc/modules-load.d/btusb.conf
+systemctl enable bluetooth.service
+
 # W.I.P - Audio and video codecs
 #pacman -S vlc alsa-utils pavucontrol
 
