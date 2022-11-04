@@ -13,7 +13,7 @@ yay -S appimagelauncher
 yay -S vscodium-bin
 
 # BLuetooth module
-pacman -S bluez bluez-utils gnome-bluetooth-3.0
+pacman -S bluez bluez-utils
 modprobe btusb
 echo btusb > /etc/modules-load.d/btusb.conf
 systemctl enable bluetooth.service
